@@ -1,0 +1,25 @@
+{
+    "name": "kacedeveloperz/permissionui",
+    "description": "A permissions manage UI for laravel-vue applications",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kacedeveloperz\\Permissionui\\": "src/"
+        }
+    },
+    "extra":{
+        "laravel":{
+            "providers": [
+                "Kacedeveloperz\\Permissionui\\PermissionUiServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Kace Developerz"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
