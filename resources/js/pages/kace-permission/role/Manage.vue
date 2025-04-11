@@ -1,10 +1,10 @@
 <script setup>
 import AppLayout from '@/layouts/AppLayout.vue';
-import Modal from "@/components/Modal.vue";
+import Modal from "@/pages/kace-permission/components/Modal.vue";
 import { Head, Link, useForm } from '@inertiajs/vue3';
 import { onMounted, ref } from 'vue';
-import Button from '@/components/Button.vue';
-import Success from '@/components/Success.vue';
+import Button from '@/pages/kace-permission/components/Button.vue';
+import Success from '@/pages/kace-permission/components/Success.vue';
 import Pagination from '@/pages/kace-permission/components/Pagination.vue';
 
 
