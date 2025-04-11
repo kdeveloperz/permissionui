@@ -1,6 +1,6 @@
-What to note before installing this package
+* What to note before installing this package
 
-*** Only compatible with laravel 12 and Inertia-vue fresh laravel 12
+> Only compatible with laravel 12 and Inertia-vue fresh laravel 12
 
 * How to install this package ---------
 
@@ -20,6 +20,11 @@ Install kacedeveloperz/pemissionui
 Run the publish command to publish the vue asset files files:
 > php artisan vendor:publish --tag=kace-perm-vue --force
 
+Run :
+> npm run dev
+
+Run : 
+> php artisan optimize:clear
 
 
 
