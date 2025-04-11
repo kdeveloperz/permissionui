@@ -44,6 +44,6 @@ class PermissionUiServiceProvider extends ServiceProvider
 
         $this->loadMigrationsFrom(__DIR__ . "/../database/migrations");
 
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'KacePermissions');
+        $this->loadViewsFrom(__DIR__ . "/../resources/views", "permissionui");
     }
 }
