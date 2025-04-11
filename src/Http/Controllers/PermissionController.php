@@ -80,4 +80,9 @@ class PermissionController extends Controller
         $permission->delete();
         return redirect()->route('permission.index')->with(['status' => 'success', 'message' => 'Permission Deleted Successfully.']);
     }
+
+    public function home()
+    {
+        return view("permissionui::home");
+    }
 }
