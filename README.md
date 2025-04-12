@@ -14,6 +14,15 @@ Install Spatie Permissions package and set up as directed
 Install vue-multiselect": "^3.2.0 package 
 > npm i vue-multiselect
 
+Install sweetalert2 package 
+> npm i sweetalert2
+
+# usage in vue component
+* import { useToast } from '@/pages/kace-permission/composables/toast';
+* const { toast } = useToast();
+#### call it like this
+* toast("success", "This is a toast message")
+
 Install kacedeveloperz/pemissionui
 > composer require kacedeveloperz/permissionui
 

@@ -35,6 +35,8 @@ class PermissionUiServiceProvider extends ServiceProvider
                 __DIR__ . '/../resources/js/pages/kace-permission/components/Modal.vue' => resource_path('/js/pages/kace-permission/components/Modal.vue'),
                 __DIR__ . '/../resources/js/pages/kace-permission/components/Success.vue' => resource_path('/js/pages/kace-permission/components/Success.vue'),
                 __DIR__ . '/../resources/js/pages/kace-permission/components/Button.vue' => resource_path('/js/pages/kace-permission/components/Button.vue'),
+                __DIR__ . '/../resources/js/pages/kace-permission/composables/permissions.js' => resource_path('/js/pages/kace-permission/composables/permissions.js'),
+                __DIR__ . '/../resources/js/pages/kace-permission/composables/toast.js' => resource_path('/js/pages/kace-permission/composables/toast.js'),
                 __DIR__ . '/../database/seeders/DatabaseSeeder.php' => database_path('/seeders/DatabaseSeeder.php'),
                 __DIR__ . '/../src/Http/Middleware/HandleInertiaRequests.php' => app_path('/Http/Middleware/HandleInertiaRequests.php'),
             ],
