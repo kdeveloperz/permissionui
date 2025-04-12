@@ -6,7 +6,7 @@ use Kacedeveloperz\Permissionui\Http\Controllers\RoleController;
 
 // use Kacedeveloperz\Contactform\Http\Controllers\ContactFormController;
 
-Route::middleware(['guest', 'web'])->group(function () {
+Route::middleware(['auth', 'web'])->group(function () {
 
     Route::resource('role', RoleController::class);
     Route::resource('permission', PermissionController::class);

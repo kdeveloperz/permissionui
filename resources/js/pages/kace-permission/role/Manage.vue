@@ -7,6 +7,12 @@ import Button from '@/pages/kace-permission/components/Button.vue';
 import Success from '@/pages/kace-permission/components/Success.vue';
 import Pagination from '@/pages/kace-permission/components/Pagination.vue';
 
+import { usePermission } from '@/pages/kace-permission/composables/permissions';
+import { useToast } from '@/pages/kace-permission/composables/toast';
+
+const { hasRole, hasPermission } = usePermission();
+const { toast } = useToast();
+
 
 
 
@@ -23,6 +29,9 @@ const confirmDelete = (id) => {
 
     console.log(id);
 
+}
+const deleteDialogCancel = ()=>{
+    toast('success', 'Delete action canceled!');
 }
 const deleteRole = () => {
     if (selectedId.value !== null) {
@@ -139,9 +148,9 @@ onMounted(() => {
                     <div class="flex items-center justify-between">
                         <h1 class="py-4  font-bold text-teal-500">Manage Roles</h1>
                         <div class="flex justify-between items-center">
-                            <Link :href="route('role.create')"><Button class="my-4 px-4 py-2.5">Create New</Button>
+                            <Link v-if="hasRole('admin') || hasPermission('create role')" :href="route('role.create')"><Button class="my-4 px-4 py-2.5">Create New</Button>
                             </Link>
-                            <Link :href="route('assign.permission.show')"><Button variant="danger"
+                            <Link v-if="hasRole('admin') || hasPermission('assign permission')" :href="route('assign.permission.show')"><Button variant="danger"
                                 class="my-2 ml-4 mr-2 px-4 py-2.5">Assign Permission</Button>
                             </Link>
                         </div>

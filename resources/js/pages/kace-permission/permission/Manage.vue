@@ -6,6 +6,11 @@ import Modal from "@/pages/kace-permission/components/Modal.vue";
 import Button from '@/pages/kace-permission/components/Button.vue';
 import Success from '@/pages/kace-permission/components/Success.vue';
 import Pagination from '@/pages/kace-permission/components/Pagination.vue';
+import { usePermission } from '@/pages/kace-permission/composables/permissions';
+import { useToast } from '@/pages/kace-permission/composables/toast';
+
+const { hasRole, hasPermission } = usePermission();
+const { toast } = useToast();
 
 const form = useForm({
 
@@ -129,7 +134,7 @@ const props = defineProps({
                 <div class="bg-white overflow-hidden mt-4   border-gray-200   sm:rounded-sm dark">
                     <div class="flex justify-between">
                         <h1 class="py-4  font-bold text-teal-500">Manage Permissions</h1>
-                        <Link :href="route('permission.create')"><Button class="m-4 px-4 py-2.5">Create New</Button></Link>
+                        <Link v-if="hasRole('admin') || hasPermission('create permission')"  :href="route('permission.create')"><Button class="m-4 px-4 py-2.5">Create New</Button></Link>
                         
 
                         </div>
