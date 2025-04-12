@@ -1,4 +1,4 @@
-* What to note before installing this package
+## What to note before installing this package
 
 > Only compatible with laravel 12 and Inertia-vue fresh laravel 12
 
@@ -32,7 +32,7 @@ Run :
 
 # Usages
 
-# usage of Toast in vue component
+### usage of Toast in vue component
 * import { useToast } from '@/pages/kace-permission/composables/toast';
 * const { toast } = useToast();
 #### call it like this
