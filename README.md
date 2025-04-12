@@ -17,11 +17,6 @@ Install vue-multiselect": "^3.2.0 package
 Install sweetalert2 package 
 > npm i sweetalert2
 
-# usage in vue component
-* import { useToast } from '@/pages/kace-permission/composables/toast';
-* const { toast } = useToast();
-#### call it like this
-* toast("success", "This is a toast message")
 
 Install kacedeveloperz/pemissionui
 > composer require kacedeveloperz/permissionui
@@ -35,5 +30,20 @@ Run :
 Run : 
 > php artisan optimize:clear
 
+# Usages
 
+# usage of Toast in vue component
+* import { useToast } from '@/pages/kace-permission/composables/toast';
+* const { toast } = useToast();
+#### call it like this
+* toast("success", "This is a toast message")
+
+# Checking of Roles and Permissions in vue component
+* import { usePermission } from '@/pages/kace-permission/composables/permissions';
+* const { hasRole, hasPermission, hasRoles, hasPermissions } = usePermission();
+#### call it like this
+* hasRole('admin')
+* hasPermission('view record')
+* hasRoles(['admin', 'author'])
+* hasPermissions(['view record', 'delete record'])
 
