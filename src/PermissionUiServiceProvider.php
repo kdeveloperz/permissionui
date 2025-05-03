@@ -48,5 +48,7 @@ class PermissionUiServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'permissionui');
 
         $this->loadMigrationsFrom(__DIR__ . "/../database/migrations");
+
+        
     }
 }

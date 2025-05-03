@@ -24,6 +24,11 @@ Install kacedeveloperz/pemissionui
 Run the publish command to publish the vue asset files files:
 > php artisan vendor:publish --tag=kace-perm-vue --force
 
+Unwrap Resource data: Add the following in your AppServiceProvider boot method:
+> JsonResource::withoutWrapping();
+* import:
+> use Illuminate\Http\Resources\Json\JsonResource;
+
 Run :
 > npm run dev
 
