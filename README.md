@@ -10,6 +10,16 @@ Run a fresh Laravel 12 with Inertia-vue option project
 
 Install Spatie Permissions package and set up as directed
 > composer require spatie/laravel-permission
+> php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+> php artisan optimize:clear
+> php artisan migrate
+
+## Add the necessary trait to your User model:
+* The User model requires this trait
+    use HasRoles;
+    * import 
+    > use Spatie\Permission\Traits\HasRoles;
+
 
 Install vue-multiselect": "^3.2.0 package 
 > npm i vue-multiselect
